@@ -1,0 +1,30 @@
+GET http://localhost:8080/
+
+###
+
+POST http://localhost:8080/api/sources/recommend
+Content-Type: application/json
+
+{
+  "userQuery": "architecture"
+}
+
+
+###
+
+POST localhost:8080/api/datasets/recommend
+Content-Type: application/json
+
+{
+  "userQuery": "Anne Frank"
+}
+
+###
+POST localhost:8080/api/terms/recommend
+Content-Type: application/json
+
+{
+  "sources": ["http://vocab.getty.edu/aat#processes-and-techniques", "http://vocab.getty.edu/aat"],
+  "query": "architecture rotterdam",
+  "languages": ["en"]
+}
