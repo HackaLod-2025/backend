@@ -1,12 +1,6 @@
 spring:
   application:
-    name: demo
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          # Configure your authorization server's issuer URI
-          # Example: issuer-uri: http://localhost:8080/realms/myrealm
-          issuer-uri: ${OAUTH2_ISSUER_URI:http://localhost:9000}
-          # OR use jwk-set-uri directly
-          # jwk-set-uri: ${OAUTH2_JWK_SET_URI:http://localhost:9000/.well-known/jwks.json}
+    name: MeKluppie Web App
+  config:
+    import:
+      - classpath:services-application.yaml

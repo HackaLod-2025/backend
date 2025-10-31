@@ -8,28 +8,25 @@
         <version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>mekluppie-restapp</artifactId>
+	<artifactId>mekluppie-services</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-	<name>MeKluppie ~ RestApp</name>
-	<description>Rest app for the MeKluppie project</description>
+	<name>MeKluppie ~ Services</name>
+	<description>Services for the MeKluppie project</description>
 
 	<dependencies>
-        <!-- Internal dependencies -->
         <dependency>
-            <groupId>org.mekluppie</groupId>
-            <artifactId>mekluppie-services</artifactId>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-model-openai</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

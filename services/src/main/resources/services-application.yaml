@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: Agentic Chatter Web App
+  ai:
+    openai:
+      chat:
+        options:
+          model: "gpt-4.1-mini"
+          temperature: 1
+
+      api-key: ${OPENAI_API_KEY:web-app-default-api-key}

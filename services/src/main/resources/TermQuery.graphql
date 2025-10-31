@@ -1,0 +1,35 @@
+query Terms($sources: [ID]!, $query: String!, $languages: [Language!]) {
+  terms(sources: $sources, query: $query, languages: $languages) {
+    source {
+      name
+      uri
+      alternateName
+      description
+      creators {
+        name
+        alternateName
+      }
+    }
+    result {
+      ... on TranslatedTerms {
+        terms {
+          uri
+          prefLabel { language value }
+          altLabel { language value }
+          hiddenLabel { language value }
+          scopeNote { language value }
+          seeAlso
+          broader { uri prefLabel { language value } }
+          narrower { uri prefLabel { language value } }
+          related { uri prefLabel { language value } }
+          exactMatch { uri prefLabel { language value } }
+        }
+      }
+      ... on Error {
+        __typename
+        message
+      }
+    }
+    responseTimeMs
+  }
+}
