@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.mekluppie.restapp;
 
 import com.nimbusds.jose.JWSObject;
 import jakarta.servlet.FilterChain;

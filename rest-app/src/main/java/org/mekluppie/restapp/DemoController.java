@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.mekluppie.restapp;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;

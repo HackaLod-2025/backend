@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.mekluppie.restapp;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;

@@ -1,4 +1,4 @@
-package com.example.demo;
+package org.mekluppie.restapp;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
