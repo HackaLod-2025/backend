@@ -8,8 +8,8 @@ This Spring Security application has been configured as an OAuth 2.0 Resource Se
 
 ### 1. **SecurityConfig.java**
 - Enabled OAuth 2.0 Resource Server with JWT authentication
-- Configured DPoP support using `.dpop(dpop -> {})`
 - Changed authorization to require authentication for all endpoints
+- Works with DPoP-bound tokens automatically when properly configured
 
 ### 2. **DPoPContextFilter.java** (NEW)
 A servlet filter that intercepts all requests and prints:
@@ -31,6 +31,11 @@ Enhanced to extract and print JWT access token information:
 ### 4. **application.yaml**
 - Added OAuth 2.0 resource server configuration
 - Configured JWT issuer URI (defaults to `http://localhost:9000`)
+
+### 5. **DPoPJwtDecoderConfig.java** (NEW)
+- Custom JWT decoder configuration bean
+- Configures JWT validation from issuer-uri or jwk-set-uri
+- Provides startup diagnostics for configuration issues
 
 ## How DPoP Works
 

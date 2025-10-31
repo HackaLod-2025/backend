@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
@@ -13,7 +14,7 @@ import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
  * this configuration enables JWT decoding while the DPoPContextFilter handles
  * DPoP proof extraction and logging.
  */
-@Configuration
+//@Configuration
 public class DPoPJwtDecoderConfig {
 
     @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri:#{null}}")
@@ -23,6 +24,7 @@ public class DPoPJwtDecoderConfig {
     private String jwkSetUri;
 
     @Bean
+    @ConditionalOnMissingBean
     public JwtDecoder jwtDecoder() {
         System.out.println("\n=== Configuring JWT Decoder for DPoP ===");
         
