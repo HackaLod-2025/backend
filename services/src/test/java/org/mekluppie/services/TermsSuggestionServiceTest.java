@@ -5,11 +5,11 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-class TermsEndpointServiceTest {
+class TermsSuggestionServiceTest {
 
     @Test
     void getTermSuggestionsTest() throws Exception {
-        TermsEndpointService service = new TermsEndpointService();
+        TermsSuggestionService service = new TermsSuggestionService();
 
         var response = service.fetchTerms(
                 List.of("http://vocab.getty.edu/aat#processes-and-techniques", "http://vocab.getty.edu/aat"),

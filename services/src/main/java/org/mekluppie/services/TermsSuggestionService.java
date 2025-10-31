@@ -1,6 +1,7 @@
 package org.mekluppie.services;
 
 import org.mekluppie.services.model.TermsResponse;
+import org.mekluppie.services.model.TermsSuggestResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
@@ -18,10 +19,10 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class TermsEndpointService {
-    private static final Logger logger = LoggerFactory.getLogger(TermsEndpointService.class);
+public class TermsSuggestionService {
+    private static final Logger logger = LoggerFactory.getLogger(TermsSuggestionService.class);
 
-    public List<String> fetchTerms(List<String> sources, String query, List<String> languages) throws Exception {
+    public TermsSuggestResponse fetchTerms(List<String> sources, String query, List<String> languages) throws Exception {
         logger.info("Fetching terms with sources: {}, query: {}, languages: {}", sources, query, languages);
 
         ClassPathResource resource = new ClassPathResource("TermQuery.graphql");
@@ -52,23 +53,28 @@ public class TermsEndpointService {
         if (termsResponse != null && termsResponse.data() != null) {
             var foundTerms = termsResponse.data().terms().stream()
                     .flatMap(termSource -> termSource.result().terms().stream()
-                            .map(term -> String.format("URI: %s%nPreferred Label: %s%nScope Note: %s%nSource: %s",
-                                    term.uri(),
-                                    term.prefLabel().stream()
-                                            .map(TermsResponse.Label::value)
-                                            .findFirst()
-                                            .orElse("N/A"),
-                                    term.scopeNote().stream()
-                                            .map(TermsResponse.Label::value)
-                                            .findFirst()
-                                            .orElse("N/A"),
-                                    termSource.source().name())))
+                            .map(term -> {
+                                        String uri = term.uri();
+                                        String prefLabel = term.prefLabel().stream()
+                                                .map(TermsResponse.Label::value)
+                                                .findFirst()
+                                                .orElse("N/A");
+                                        String scopeNote = term.scopeNote().stream()
+                                                .map(TermsResponse.Label::value)
+                                                .findFirst()
+                                                .orElse("N/A");
+                                        String source = termSource.source().name();
+                                        return new TermsSuggestResponse.TermsSuggestItem(uri, prefLabel, scopeNote,
+                                                source);
+                                    }
+                            ))
                     .toList();
+
             logger.info("Fetched {} terms", foundTerms.size());
-            return foundTerms;
+            return new TermsSuggestResponse(foundTerms);
         } else {
             logger.warn("No terms found in the response");
-            return List.of();
+            return new TermsSuggestResponse(List.of());
         }
     }
 }

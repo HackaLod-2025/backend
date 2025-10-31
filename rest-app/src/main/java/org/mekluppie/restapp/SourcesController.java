@@ -1,7 +1,7 @@
 package org.mekluppie.restapp;
 
 import org.mekluppie.restapp.model.RecommendSourceRequest;
-import org.mekluppie.services.TermsSourcesService;
+import org.mekluppie.services.SourcesSuggestionService;
 import org.mekluppie.services.model.SourceResponse;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SourcesController {
-    private final TermsSourcesService service;
+    private final SourcesSuggestionService service;
 
-    public SourcesController(TermsSourcesService service) {
+    public SourcesController(SourcesSuggestionService service) {
         this.service = service;
     }
 

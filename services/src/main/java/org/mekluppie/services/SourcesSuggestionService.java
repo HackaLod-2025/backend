@@ -7,17 +7,17 @@ import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
 
 @Service
-public class TermsSourcesService {
-    private static final Logger logger = LoggerFactory.getLogger(TermsSourcesService.class);
+public class SourcesSuggestionService {
+    private static final Logger logger = LoggerFactory.getLogger(SourcesSuggestionService.class);
 
     private final ChatClient chatClient;
 
-    public TermsSourcesService(ChatClient chatClient) {
+    public SourcesSuggestionService(ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 
     public SourceResponse recommendSources(String userQuery) {
-        logger.debug("TermsSourcesService handling request: {}", userQuery);
+        logger.debug("SourcesSuggestionService handling request: {}", userQuery);
 
         String prompt = """
                 You are an intelligent agent specializing in the domain of terminology, heritage, and cultural data sources from the Netherlands’ National Heritage Network (Termennetwerk).
