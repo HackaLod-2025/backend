@@ -36,7 +36,7 @@ POST http://localhost:8080/api/datasets/images
 Content-Type: application/json
 
 {
-  "query": "kerk"
+  "query": "amsterdam"
 }
 
 ###
