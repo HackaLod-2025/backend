@@ -16,6 +16,7 @@
         <spring.boot.version>3.5.7</spring.boot.version>
         <spring-ai.version>1.0.3</spring-ai.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jena.version>5.6.0</jena.version>
     </properties>
 
     <modules>
@@ -47,6 +48,21 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>org.apache.jena</groupId>
+                <artifactId>apache-jena-libs</artifactId>
+                <version>${jena.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.19.0</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
