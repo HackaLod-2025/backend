@@ -176,16 +176,6 @@ public class DatasetSuggestionService {
                     "publisher": "KB, national library of the Netherlands"
                   },
                   {
-                    "title": "Beelddocumenten",
-                    "description": "Erfgoed Enschede",
-                    "publisher": ""
-                  },
-                  {
-                    "title": "Boeken en Tijdschriften",
-                    "description": "Erfgoed Enschede",
-                    "publisher": ""
-                  },
-                  {
                     "title": "Chabot Museum - Museum objecten",
                     "description": "Een lijst van alle beschikbare museale objecten van Chabot Museum.",
                     "publisher": "Chabot Museum"
@@ -381,11 +371,6 @@ public class DatasetSuggestionService {
                     "publisher": "Nationaal Museum van Wereldculturen"
                   },
                   {
-                    "title": "Oorlogsbronnen - Beelddocumenten",
-                    "description": "PeelenMaasNet",
-                    "publisher": ""
-                  },
-                  {
                     "title": "Oorlogsbronnen - Krantenpaginas",
                     "description": "no description",
                     "publisher": "PeelenMaasNet"
@@ -421,19 +406,9 @@ public class DatasetSuggestionService {
                     "publisher": "Cinema Context"
                   },
                   {
-                    "title": "Collecties",
-                    "description": "CBS",
-                    "publisher": ""
-                  },
-                  {
                     "title": "Colonial Objects",
                     "description": "This dataset is published by a TriplyETL pipeline: [internal link](https://git.triply.cc/customers/rce/colonial-objects/-/pipelines)",
                     "publisher": "Rijksdienst voor het Cultureel Erfgoed (RCE)"
-                  },
-                  {
-                    "title": "Documenten",
-                    "description": "no dscription",
-                    "publisher": "CBS"
                   },
                   {
                     "title": "ECARTICO",
@@ -444,31 +419,6 @@ public class DatasetSuggestionService {
                     "title": "ENK - Museum objecten",
                     "description": "Een lijst van alle beschikbare museale objecten van Gemeente Enkhuizen.",
                     "publisher": "Gemeente Enkhuizen"
-                  },
-                  {
-                    "title": "Images 1850 - 1899",
-                    "description": "Images in documenten met jaargang tussen 1850 en 1899",
-                    "publisher": "CBS"
-                  },
-                  {
-                    "title": "Images 1900 - 1949",
-                    "description": "Images in documenten met jaargang tussen 1900 en 1949",
-                    "publisher": "CBS"
-                  },
-                  {
-                    "title": "Images 1950 - 1999",
-                    "description": "Images in documenten met jaargang tussen 1950 en 1999.",
-                    "publisher": "CBS"
-                  },
-                  {
-                    "title": "Images na 1999",
-                    "description": "Images in documenten met jaargang na 1999.",
-                    "publisher": "CBS"
-                  },
-                  {
-                    "title": "Images voor 1850",
-                    "description": "Images in documenten met jaargang voor 1850",
-                    "publisher": "CBS"
                   },
                   {
                     "title": "Indertied",
@@ -511,26 +461,6 @@ public class DatasetSuggestionService {
                     "publisher": "Musiom"
                   },
                   {
-                    "title": "NADD Creators: Nederlandse ontwerpers en makers binnen het design- en digitale cultuurveld",
-                    "description": "The NADD Creators dataset includes relevant Dutch designers and organisations, determined by criteria such as education, work experience, inclusion in museum collections, membership of professional organisations, publications and awards.",
-                    "publisher": "Network Archives Design and Digital Culture"
-                  },
-                  {
-                    "title": "NADD Occupations: beroepen gerelateerd aan design en digitale cultuur",
-                    "description": "This relatively small set has been developed so that professions relevant to NADD can be well documented and visualised. Think of professions such as \\"graphic designer\\", \\"stamp designer\\" and \\"multimedia artist\\". This set is used internally to properly manage and visualise the \\"NADD creator\\" set. The idea is to continue working on this set with NADD partners in the future, as a controlled vocabulary.",
-                    "publisher": "Network Archives Design and Digital Culture"
-                  },
-                  {
-                    "title": "NADD Project set: ontwerpers en makers binnen het design- en digitale cultuurveld bekend bij Nederlandse instellingen",
-                    "description": "This dataset is the \\"mother set\\", created in collaboration with the partners of the NADD network. These partners donated their data to Wikidata to have the copyright status of their collections analysed and create persistent identifiers for creators (individuals and organisations). This data was supplemented with information from relevant publications and sources, such as \\"Women in Design\\", all Dutch design awards and the Canon of Digital Culture. Because in many cases all makers were donated from the partners' datasets, this dataset also includes artists with a less strong connection to design or digital culture. It also includes other art patrons, such as countries and municipalities. If you only want use creators from design or digital culture fields we recommend the NADD Creators set.",
-                    "publisher": "Network Archives Design and Digital Culture"
-                  },
-                  {
-                    "title": "ONSTAGE",
-                    "description": "ONSTAGE is the data repository for Amsterdam's first and most prominent public theatre venue: the Schouwburg. In theatre history, the Amsterdam Schouwburg has a fairly unique place due to its rich body of extant account books, programs and administrative records of annual play lists, and registers of expenses and revenues. These sources, as a most sensitive finger on the theatre's pulse, can be used as analytical tools that provide access to the theatre's artistic business, from its foundation in 1638 until today. For more information, see: https://www.vondel.humanities.uva.nl/onstage/",
-                    "publisher": "CREATE"
-                  },
-                  {
                     "title": "Wijkmuseum Soesterkwartier",
                     "description": "Deze dataset bevat gestructureerde beschrijvingen van voorwerpen, documenten en persoonlijke verhalen vanaf ongeveer de jaren '20 van de vorige eeuw met betrekking tot de wijk Soesterkwartier in Amersfoort. De dataset is bestemd voor iedereen in of buiten het Soesterkwartier die meer wil weten over het dagelijks leven en de bedrijvigheid in deze volksbuurt.",
                     "publisher": "Wijkmuseum Soesterkwartier"
@@ -539,21 +469,6 @@ public class DatasetSuggestionService {
                     "title": "Akten indemniteit Zegwaart en Zoetermeer",
                     "description": "Dataset bestaande uit de akten van indemniteit van Zegwaart en Zoetermeer.",
                     "publisher": "Gemeente Zoetermeer"
-                  },
-                  {
-                    "title": "Archiefbestanddelen",
-                    "description": "DEVENTit Demo",
-                    "publisher": ""
-                  },
-                  {
-                    "title": "Archiefvormers",
-                    "description": "no description",
-                    "publisher": "DEVENTit Demo"
-                  },
-                  {
-                    "title": "Archieven",
-                    "description": "no description",
-                    "publisher": "DEVENTit Demo"
                   },
                   {
                     "title": "De Hollandse Cirkel - Beeldbank",
@@ -596,24 +511,9 @@ public class DatasetSuggestionService {
                     "publisher": "IHLIA - LGBTI Heritage"
                   },
                   {
-                    "title": "Krantenpagina's",
-                    "description": "no description",
-                    "publisher": "DEVENTit Demo"
-                  },
-                  {
                     "title": "Molens",
                     "description": "Linked Data mapping downloaded from the Dutch [Nationaal Georegister](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e). Created as a reaction to a keynote on [Data Matters conference](https://tinyurl.com/mr4yrmna).",
                     "publisher": "Mark Lindeman"
-                  },
-                  {
-                    "title": "Museum objecten",
-                    "description": "no description",
-                    "publisher": "DEVENTit Demo"
-                  },
-                  {
-                    "title": "Museum objecten",
-                    "description": "Museum Rotterdam",
-                    "publisher": ""
                   },
                   {
                     "title": "Museum objecten 2.0 (Nog in test - Arman)",
