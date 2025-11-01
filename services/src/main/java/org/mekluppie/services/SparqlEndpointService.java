@@ -40,7 +40,7 @@ public class SparqlEndpointService {
                 String widgetImage = binding.path("widgetImage").asText();
                 results.add(new ImageQueryResponse(image, widgetLabel, widgetImage));
             }
-            return results;
+            return results.subList(0, Math.min(results.size(), 30));
         } catch (Exception e) {
             throw new RuntimeException("Failed to parse SPARQL response", e);
         }
