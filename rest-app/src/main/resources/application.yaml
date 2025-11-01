@@ -4,8 +4,13 @@ spring:
   config:
     import:
       - classpath:services-application.yaml
-#  security:
-#    oauth2:
-#      resourceserver:
-#        jwt:
-#          issuer-uri: https://solidcommunity.net/
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://solidcommunity.net/
+logging:
+  level:
+    root: info
+    org.springframework.security.oauth2: TRACE
+    com.nimbusds: DEBUG
