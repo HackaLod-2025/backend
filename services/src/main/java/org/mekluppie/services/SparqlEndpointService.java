@@ -25,7 +25,7 @@ public class SparqlEndpointService {
 
     public List<ImageQueryResponse> executeImageQuery(String imageName) {
         String endpoint = "https://lod.uba.uva.nl/_api/datasets/UB-UVA/Beeldbank/services/virtuoso/sparql";
-        String query = String.format("prefix dcmi: <http://purl.org/dc/dcmitype/>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nprefix edm: <http://www.europeana.eu/schemas/edm/>\nselect * {\n  ?image a dcmi:Image .\n  ?image rdfs:label ?widgetLabel; edm:isShownBy ?widgetImage .\n  # filter(?image = <https://hdl.handle.net/11245/3.19290>)\n  filter(CONTAINS(LCASE(?widgetLabel), LCASE(\"%s\")))\n}", imageName);
+        String query = String.format("prefix dcmi: <http://purl.org/dc/dcmitype/>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nprefix edm: <http://www.europeana.eu/schemas/edm/>\nselect * {\n  ?image a dcmi:Image .\n  ?image rdfs:label ?widgetLabel; edm:isShownBy ?widgetImage .\n  # filter(?image = <https://hdl.handle.net/11245/3.19290>)\n  filter(CONTAINS(LCASE(?widgetLabel), LCASE(\"%s\")))\n} LIMIT 30", imageName);
 
         var response = executeQuery(query, endpoint);
 
