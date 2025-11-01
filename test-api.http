@@ -16,7 +16,7 @@ POST localhost:8080/api/datasets/recommend
 Content-Type: application/json
 
 {
-  "userQuery": "Harry Mulisch"
+  "userQuery": "Mulisch"
 }
 
 ###

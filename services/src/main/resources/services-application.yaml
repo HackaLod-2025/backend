@@ -7,5 +7,12 @@ spring:
         options:
           model: "gpt-5-mini"
           temperature: 1
-
       api-key: ${OPENAI_API_KEY:web-app-default-api-key}
+
+    vectorstore:
+      weaviate:
+        host: ${WEAVIATE_HOST:pv1rgpajrakzeu1y7bdywg.c0.europe-west3.gcp.weaviate.cloud}
+        scheme: ${WEAVIATE_SCHEME:https}
+        api-key: ${WEAVIATE_API_KEY:UDRFeEwwV1NXVloxQVpJU195SmI0eXVCeDQzeldBclJWZzc3K1pxeFB6Wm1iOGVlak1ORWRhbWl4VTdFPV92MjAw}
+        headers:
+          X-OpenAI-Api-Key: ${OPENAI_API_KEY}
