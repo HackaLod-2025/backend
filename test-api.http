@@ -32,16 +32,18 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:8080/api/datasets/test-sparql
+POST http://localhost:8080/api/datasets/images
 Content-Type: application/json
 
 {
-  "authorName": "kerk"
+  "query": "kerk"
 }
 
 ###
 
-POST https://data.bibliotheken.nl/_api/datasets/KB/Production/services/Production-VTS/sparql
+POST http://localhost:8080/api/datasets/author
 Content-Type: application/json
 
-{"query":"prefix schema: <http://schema.org/>\nprefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nselect ?boek (sample(?titel) as ?t) where {\n  ?auteur schema:familyName ?familyName .\n  ?boek schema:author ?auteur; schema:name ?titel; rdfs:label ?boekLabel .\n  filter(?familyName = \"Mulisch\")\n} group by ?boek"}
+{
+  "query": "Mulisch"
+}
