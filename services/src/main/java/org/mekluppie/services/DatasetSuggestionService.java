@@ -51,6 +51,11 @@ public class DatasetSuggestionService {
                 # datasets
                 [
                   {
+                    "title": "Beeldbank",
+                    "description": "Beeldbank (Digital Image Repository). Contains metadata on digitized images of the collection (books, manuscripts, images, maps, archaeological and other objects). Datasource (catalogue) front end: https://lib.uva.nl/ Image Repository front end: https://www.uvaerfgoed.nl/beeldbank",
+                    "publisher": "University of Amsterdam Library"
+                  },
+                  {
                     "title": "Amateurfilm collectie",
                     "description": "Samenvatting: De amateurfilmcollectie bevat films gemaakt vanaf de jaren 1910 tot nu. Het bevat familiefilms, reisfilms, fictiefilms en animatie. De films waren bedoeld voor vertoningen thuis of op de filmclubs in Nederland. Inmiddels zijn het geliefde onderwerpen voor historici en mediamakers.",
                     "publisher": "Nederlands Instituut voor Beeld en Geluid"
